@@ -1,0 +1,15 @@
+<html>
+  <body>
+	<h1> This server name is <%= node["fqdn"] %>!</h1>
+	<p>
+	     Server Details <br />
+	     ================================== <br />
+	     Platform	: <%= node["platform"] %> <br />
+	     OS Version	: <%= node["os_version"] %> <br />
+	     IP address : <%= node["ipaddress"] %> <br />
+	     Memory	: <%= node["memory"]["total"].to_i / 1024 %> MB <br />
+	     CPU speed 	: <%= node["cpu"]["0"]["mhz"] %> <br />
+	     CPU Model	: <%= node["cpu"]["0"]["model_name"] %> <br />
+	</p>
+   </body>
+</html>	     
